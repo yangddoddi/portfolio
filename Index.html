@@ -12,22 +12,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://kit.fontawesome.com/6cca727381.js" crossorigin="anonymous"></script>
     <script src="main.js" defer></script>
 </head>
 <body>
     <!-- navbar -->
     <nav id="navbar">
-        <div id="navbar__logo">
-            <a href="#"><img src="images/name.png" alt=""></a>
-        </div>
-        <div>
-            <div class="ul" id="navbar__menu">
-                <li id="navbar__menu__item">About</li>
-                <li id="navbar__menu__item">Skills</li>
-                <li id="navbar__menu__item">Work</li>
-                <li id="navbar__menu__item">contact</li>
+        <div class="navbar__title">
+            <a href="#">
+            <img src="images/logo_title.png" alt="page logo"></a>
+            <div class="navbar__title__name">
+                <span class="navbar__title__main">양은찬</span>
+                <span class="navbar__title__sub">Front-end developer</span>
             </div>
+            </div>
+        <div>
+            <ul id="navbar__menu">
+                <li class="navbar__menu__item active">Home</li>
+                <li class="navbar__menu__item">About</li>
+                <li class="navbar__menu__item">Skills</li>
+                <li class="navbar__menu__item">Work</li>
+                <li class="navbar__menu__item">Testimonial</li>
+                <li class="navbar__menu__item">contact</li>
+            </ul>
         </div>
     </nav>
     <!-- home -->
