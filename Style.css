@@ -3,15 +3,15 @@
   /* Color */
   --color-whitesmoke: #f5f5f5;
   --color-white: #ffffff;
-  --color-lightgrey: #c2c2c2;
-  --color-white: #ffffff;
-  --color-light-white: #eeeeee;
+  --color-lightgrey: #f5f5f5;
+  --color-black: #000000;
+  --color-light-white: #;
   --color-dark-white: #bdbdbd;
   --color-pink: #fe918d;
   --color-dark-pink: #ff6863;
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
-  --color-light-grey: #7c7979;
+  --color-light-grey: #c2c2c2;
   --color-blue: #73aace;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
@@ -73,7 +73,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 li {
@@ -81,10 +81,20 @@ li {
 }
 
 button {
-    outline: none;
-    cursor: pointer;
-    background-color: transparent;
-    border-style: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  border-style: none;
+}
+
+.section {
+  text-align: center;
+  margin: auto;
+}
+
+.section__container {
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* Navbar */
@@ -96,27 +106,26 @@ button {
   align-items: center;
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 .navbar__title {
-    display: flex;
-    align-items: center;
-    padding: 5px 10px;
-    
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
 }
 
 .navbar__title__name {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar__title__main {
-    font-size: 34;
+  font-size: 34;
 }
 
 .navbar__title__sub {
-    font-size: 4px;
+  font-size: 4px;
 }
 
 #navbar__menu {
@@ -128,48 +137,114 @@ button {
 .navbar__menu__item {
   padding: 4px 4px;
   margin: 4px 10px;
-  cursor: pointer;P
+  cursor: pointer;
 }
 
 .navbar__menu__item:hover {
-  background-color: var(--color-dark-white);
+  background-color: var(--color-whitesmoke);
   border-radius: var(--size-borderradius);
   transition: 1s ease;
 }
 
 .navbar__menu__item.active {
-  border: 1px solid var(--color-white);
-  border-radius: var(--size-borderradius)
+  border: 1px solid var(--color-black);
+  border-radius: var(--size-borderradius);
 }
-
 
 /* Home */
 
 #home {
-    background-image: url(images/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 60px 0px;
+  background-image: url(images/background2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0px;
 }
 
 .home__photo {
-    width: 250px;
-    height: 270px;
-    border-radius: 50%;
-    margin-bottom: 40px;
-    border : 1px solid var(--color-white);
+  width: 250px;
+  height: 270px;
+  border-radius: 50%;
+  margin-bottom: 40px;
+  border: 1px solid var(--color-black);
 }
 
 .home__profile {
-    color: var(--color-white);
+  color: var(--color-black);
 }
 
 .home__contact {
-    color:var(--color-white);
-    border: 1px solid var(--color-white);
-    padding: 4px 8px;
-    margin-top: 25px;
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+  padding: 4px 8px;
+  margin-top: 25px;
+}
+
+/* about */
+
+#about {
+  background-color: var(--color-lightgrey);
+  padding: 40px 0px;
+}
+
+.majors {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+  margin-right: 0px;
+  padding: 0px 200px;
+}
+.major__icon {
+  width: 120px;
+  height: 120px;
+  font-size: 50px;
+  margin: auto;
+  line-height: 120px;
+  border: 3px solid var(--color-blue);
+  border-radius: 50%;
+  color: var(--color-blue);
+}
+
+.major__icon:hover {
+  color: var(--color-pink);
+  transform: rotate(360deg);
+  transition: all ease 300ms;
+}
+
+.major__title {
+  margin-top: 20px;
+  color: var(--color-dark-grey);
+}
+
+.major__discription {
+  color: var(--color-grey);
+  font-size: var(--font-micro);
+}
+
+.carrer {
+  text-align: left;
+  margin-top: 60px;
+}
+
+.carrer__detail {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.carrer__Detail__logo {
+  font-size: 35px;
+  margin-right: 10px;
+  color: var(--color-blue);
+}
+
+.carrer__discription__title {
+  font-size: var(--font-micro);
+  color: var(--color-dark-grey);
+}
+.carrer__discription__period {
+  font-size: var(--font-micro);
+  color: var(--color-grey);
 }
