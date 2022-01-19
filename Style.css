@@ -147,7 +147,8 @@ button {
 .navbar__menu__item:hover {
   background-color: var(--color-whitesmoke);
   border-radius: var(--size-borderradius);
-  transition: 1s ease;
+  border: 1px solid var(--color-black);
+  transition: 300ms ease;
 }
 
 .navbar__menu__item.active {
@@ -310,4 +311,112 @@ button {
   background-color: var(--color-grey);
   height: 50%;
   padding-top: 10px;
+}
+
+/* Work */
+
+.work__categories {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.categories__btn {
+  border: 1px solid var(--color-black);
+  width: 200px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: var(--color-white);
+  font-weight: var(--weight-semi-bold);
+}
+
+.categories__count {
+  background-color: var(--color-whitesmoke);
+  color: var(--color-black);
+  font-size: var(--font-micro);
+  opacity: 0;
+  position: relative;
+  top: -15px;
+  left: 10px;
+  border: 1px solid var(--color-black);
+  display: inline-block;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+}
+
+.categories__btn.active,
+.categories__btn:hover {
+  background-color: var(--color-grey);
+  color: var(--color-white);
+}
+
+.categories__btn.active .categories__count,
+.categories__btn:hover .categories__count {
+  opacity: 1;
+  top: 0;
+  transition: all 300ms ease;
+}
+
+.work__projects {
+  display: flex;
+  padding-top: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projects {
+  width: 220px;
+  height: 200px;
+  position: relative;
+  margin: 3px;
+  background-color: var(--color-whitesmoke);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project__image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.project__discription {
+  position: absolute;
+  background-color: var(--color-black);
+  font-size: var(--font-micro);
+  color: var(--color-whitesmoke);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.project__discription h3 {
+  color: var(--color-whitesmoke);
+}
+
+.project__discription:after {
+  content: "";
+  height: 1px;
+  background-color: var(--color-whitesmoke);
+  width: 60px;
+  display: block;
+  position: relative;
+  bottom: 22px;
+  left: 36%;
+}
+
+.projects:hover .project__discription {
+  opacity: 75%;
+  bottom: 0;
+  transition: all ease-in 300ms;
+  transform: translateY(0);
 }
