@@ -16,6 +16,7 @@
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
+  --color-contact: #ededed;
   /* Font size */
   --font-large: 48px;
   --font-medium: 28px;
@@ -465,4 +466,33 @@ button {
 }
 .tetimonial__people-buble a {
   color: var(--color-blue);
+}
+
+/* Contact */
+
+#contact {
+  background-color: var(--color-contact);
+}
+
+.contact__email {
+  margin-top: 25px;
+}
+
+.contact__link {
+  font-size: 50px;
+  margin: 25px 0px;
+}
+
+.contact__link a {
+  margin: 0px 10px;
+}
+
+.contact__link i:hover {
+  color: var(--color-dark-pink);
+  transform: scale(1.5);
+  transition: all ease-in 300ms;
+}
+
+.contact__rights {
+  color: var(--color-grey);
 }
