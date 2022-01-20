@@ -368,8 +368,8 @@ button {
 }
 
 .projects {
-  width: 220px;
-  height: 200px;
+  width: 240px;
+  height: 220px;
   position: relative;
   margin: 3px;
   background-color: var(--color-whitesmoke);
@@ -419,4 +419,50 @@ button {
   bottom: 0;
   transition: all ease-in 300ms;
   transform: translateY(0);
+}
+
+/* Testimonial */
+
+#testimonial {
+  background-color: var(--color-lightgrey);
+}
+
+.testimonial__list {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.testimonial__avatar:nth-child(odd) {
+  margin-right: 50px;
+}
+
+.testimonial__avatar:nth-child(even) {
+  margin-left: 50px;
+}
+
+.tetimonial__people-buble {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+  width: 700px;
+  height: 150px;
+  border-radius: 3%;
+  color: var(--color-grey);
+}
+
+.tetimonial__people-buble p {
+  color: var(--color-grey);
+}
+.tetimonial__people-buble a {
+  color: var(--color-blue);
 }
