@@ -144,7 +144,7 @@ button {
   font-size: 4px;
 }
 
-#navbar__menu {
+.navbar__menu {
   display: flex;
   margin: 0;
   padding: 0;
