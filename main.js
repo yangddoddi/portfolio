@@ -16,7 +16,6 @@ document.addEventListener("scroll", () => {
 // Pressing the menu button scrolls to the corresponding page.
 
 const navbarMenu = document.querySelector(".navbar__menu");
-console.log(navbarMenu);
 navbarMenu.addEventListener("click", (event) => {
   const Target = event.target;
   const Position = Target.dataset.link;
@@ -29,8 +28,24 @@ navbarMenu.addEventListener("click", (event) => {
 
 // Pressing the Contact Me button moves to the contact item.
 
-const Home = document.querySelector("#home");
-Home.addEventListener("click", (event) => {
+const Contacbtn = document.querySelector(".home__contact");
+Contacbtn.addEventListener("click", (event) => {
   const ContactMe = document.querySelector("#contact");
   ContactMe.scrollIntoView({ behavior: "smooth" });
+});
+
+// Home screen fade out.
+
+const Home = document.querySelector("#home");
+const HomeContainer = document.querySelector(".home__container");
+document.addEventListener("scroll", () => {
+  const Homeheight = Home.getBoundingClientRect().height;
+  const Hometop = Home.getBoundingClientRect().top;
+  const Homebottom = Home.getBoundingClientRect().bottom;
+  console.log(Homeheight);
+  console.log(Hometop);
+  console.log(Homebottom);
+  console.log(scrollY);
+  console.log(1 - scrollY / Homeheight);
+  HomeContainer.style.opacity = 1 - scrollY / Homeheight;
 });
