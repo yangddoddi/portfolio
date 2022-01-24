@@ -184,11 +184,16 @@ button {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   height: 100vh;
   opacity: 1;
   transition: all ease-in 1s;
+}
+
+.home__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .home__photo {
@@ -519,6 +524,26 @@ button {
   color: var(--color-grey);
 }
 
+/* arrow button */
+
+.arrowbutton {
+  position: fixed;
+  bottom: 5%;
+  right: 40px;
+  font-size: 35px;
+  z-index: 1;
+  color: var(--color-dark-grey);
+  pointer-events: none;
+  opacity: 0;
+  transition: all 300ms ease-in;
+}
+
+.arrowbutton.pop {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
 /* media  */
 
 @media (max-width: 768px) {
@@ -565,4 +590,9 @@ button {
     width: 100px;
     height: 100px;
   }
+
+  .arrowbutton.pop {
+    bottom : 3%;
+    right: 2%;
+    opacity: 0;
 }

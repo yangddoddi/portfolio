@@ -40,12 +40,27 @@ const Home = document.querySelector("#home");
 const HomeContainer = document.querySelector(".home__container");
 document.addEventListener("scroll", () => {
   const Homeheight = Home.getBoundingClientRect().height;
-  const Hometop = Home.getBoundingClientRect().top;
-  const Homebottom = Home.getBoundingClientRect().bottom;
-  console.log(Homeheight);
-  console.log(Hometop);
-  console.log(Homebottom);
-  console.log(scrollY);
-  console.log(1 - scrollY / Homeheight);
   HomeContainer.style.opacity = 1 - scrollY / Homeheight;
+});
+
+// If you click, the button that moves to the top of the page.
+
+const ArrowButton = document.querySelector(".arrowbutton");
+const About = document.querySelector("#about");
+const AboutTop = About.getBoundingClientRect().top;
+document.addEventListener("scroll", () => {
+  if (scrollY >= AboutTop) {
+    ArrowButton.classList.add("pop");
+  } else {
+    ArrowButton.classList.remove("pop");
+  }
+});
+
+function scrollIntoView(selector) {
+  const Scrollto = document.querySelector(selector);
+  Scrollto.scrollIntoView({ behavior: "smooth" });
+}
+
+ArrowButton.addEventListener("click", () => {
+  scrollIntoView("#home");
 });
