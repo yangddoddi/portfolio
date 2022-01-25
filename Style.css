@@ -164,7 +164,7 @@ button {
   transition: 300ms ease;
 }
 
-.navbar__bar {
+.navbar__hamburger {
   position: absolute;
   right: 30px;
   top: 23px;
@@ -434,7 +434,7 @@ button {
 }
 
 .project__discription h3 {
-  color: var(--color-whitesmoke);
+  color: var(--color-orange);
 }
 
 .project__discription:after {
@@ -556,13 +556,15 @@ button {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-whitesmoke);
+    padding: 0px;
   }
 
   .navbar__title__name {
     display: none;
   }
 
-  .navbar__bar {
+  .navbar__hamburger {
     display: block;
   }
 
@@ -574,10 +576,14 @@ button {
     display: none;
   }
 
+  .navbar__menu.open {
+    display: block;
+    background-color: whitesmoke;
+  }
+
   .navbar__menu__item:hover,
   .navbar__menu__item.active {
     border: none;
-    border-radius: 0;
   }
 
   .majors {

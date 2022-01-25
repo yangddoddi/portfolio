@@ -22,8 +22,17 @@ navbarMenu.addEventListener("click", (event) => {
   if (Position == null) {
     return;
   }
+  navbarMenu.classList.remove("open");
   const Link = document.querySelector(Position);
   Link.scrollIntoView({ behavior: "smooth" });
+});
+
+// Navbar toggle button
+
+const hamburger = document.querySelector(".navbar__hamburger");
+
+hamburger.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
 });
 
 // Pressing the Contact Me button moves to the contact item.
