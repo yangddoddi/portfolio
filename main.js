@@ -64,3 +64,28 @@ function scrollIntoView(selector) {
 ArrowButton.addEventListener("click", () => {
   scrollIntoView("#home");
 });
+
+// My work's menu
+
+const Categories = document.querySelector(".work__categories");
+const Categorybtn = document.querySelector(".categories__btn");
+const Projects = document.querySelectorAll(".projects");
+const Allprojects = document.querySelector(".work__projects");
+Categories.addEventListener("click", (event) => {
+  const Target = event.target;
+  const Category =
+    Target.dataset.category || Target.parentNode.dataset.category;
+
+  Allprojects.classList.add("animation__out");
+
+  setTimeout(() => {
+    Projects.forEach(function (e) {
+      if (e.dataset.project == Category || "*" == Category) {
+        e.classList.remove("projects__none");
+      } else {
+        e.classList.add("projects__none");
+      }
+    });
+    Allprojects.classList.remove("animation__out");
+  }, 300);
+});
