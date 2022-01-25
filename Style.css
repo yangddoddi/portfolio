@@ -89,6 +89,7 @@ button {
   cursor: pointer;
   background-color: transparent;
   border-style: none;
+  padding: 0;
 }
 
 .section {
@@ -209,6 +210,12 @@ button {
   border: 1px solid var(--color-black);
   padding: 4px 8px;
   margin-top: 25px;
+}
+
+.home__contact:hover {
+  background-color: var(--color-whitesmoke);
+  border-radius: 15%;
+  transition: all ease-in 300ms;
 }
 
 /* about */
@@ -353,6 +360,7 @@ button {
   border-radius: 3px;
   background-color: var(--color-white);
   font-weight: var(--weight-semi-bold);
+  position: relative;
 }
 
 .categories__count {
@@ -361,14 +369,15 @@ button {
   font-size: var(--font-micro);
   opacity: 0;
   position: relative;
-  top: -15px;
-  left: 10px;
+  top: 0px;
+  right: 60px;
   border: 1px solid var(--color-black);
   display: inline-block;
   border-radius: 50%;
   width: 18px;
   height: 18px;
   line-height: 18px;
+  position: absolute;
 }
 
 .categories__btn.selected,
@@ -380,7 +389,7 @@ button {
 .categories__btn.selected .categories__count,
 .categories__btn:hover .categories__count {
   opacity: 1;
-  top: 0;
+  top: 5px;
   transition: all 300ms ease;
 }
 
@@ -549,10 +558,22 @@ button {
   pointer-events: auto;
 }
 
-
 /* media  */
 
 @media (max-width: 768px) {
+  :root {
+    --font-large: 36px;
+    --font-medium: 24px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
+  .section {
+    padding: 30px 15px;
+    padding-top: 50px;
+  }
+
   #navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -588,14 +609,25 @@ button {
 
   .majors {
     flex-direction: column;
+    padding: 0px;
   }
 
   .major {
     margin: 20px 0px;
+    display: inline;
   }
 
   .skillset {
     flex-direction: column;
+  }
+
+  .categories__count {
+    right: 5px;
+  }
+
+  .projects {
+    width: 300px;
+    height: 280px;
   }
 
   .testimonial__avatar {
@@ -603,7 +635,16 @@ button {
     height: 100px;
   }
 
+  .testimonial__avatar:nth-child(odd) {
+    margin-right: 15px;
+  }
+
+  .testimonial__avatar:nth-child(even) {
+    margin-left: 15px;
+  }
+
   .arrowbutton.pop {
-    bottom : 3%;
+    bottom: 3%;
     right: 2%;
+  }
 }
