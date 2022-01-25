@@ -76,8 +76,14 @@ Categories.addEventListener("click", (event) => {
   const Category =
     Target.dataset.category || Target.parentNode.dataset.category;
 
-  Allprojects.classList.add("animation__out");
+  // select diasble || able
+  const Selected = document.querySelector(".categories__btn.selected");
+  const SeletTarget =
+    event.target.nodeName === "BUTTON" ? event.target : event.target.parentNode;
+  Selected.classList.remove("selected");
+  SeletTarget.classList.add("selected");
 
+  Allprojects.classList.add("animation__out");
   setTimeout(() => {
     Projects.forEach(function (e) {
       if (e.dataset.project == Category || "*" == Category) {
