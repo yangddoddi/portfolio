@@ -165,4 +165,4 @@ Categories.addEventListener("click", (event) => {
   }, 300);
 });
 
-//
+//$ git commit --allow-empty -m "Trigger rebuild" $ git push
