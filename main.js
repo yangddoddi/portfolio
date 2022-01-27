@@ -164,3 +164,5 @@ Categories.addEventListener("click", (event) => {
     Allprojects.classList.remove("animation__out");
   }, 300);
 });
+
+//
