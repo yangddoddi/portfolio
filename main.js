@@ -164,5 +164,3 @@ Categories.addEventListener("click", (event) => {
     Allprojects.classList.remove("animation__out");
   }, 300);
 });
-
-//$ git commit --allow-empty -m "Trigger rebuild" $ git push
