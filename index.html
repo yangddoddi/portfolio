@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eunchan's portpolio</title>
+    <meta name="description" content="프론트엔드 개발자 지망생의 포트폴리오입니다.">
+    <meta name="author" constent="양은찬">
+    <link rel="icon" type"image/png" href="images/logo.png" <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://kit.fontawesome.com/6cca727381.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav id="navbar">
+        <div class="navbar__title">
+            <a href="#">
+                <img src="images/logotitle.png" alt="page logo"></a>
+            <div class="navbar__title__name">
+                <span class="navbar__title__main">양은찬</span>
+                <span class="navbar__title__sub">Front-end developer</span>
+            </div>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__menu__item" data-link="#home">Home</li>
+            <li class="navbar__menu__item" data-link="#about">About</li>
+            <li class="navbar__menu__item" data-link="#skills">Skills</li>
+            <li class="navbar__menu__item" data-link="#work">Work</li>
+            <li class="navbar__menu__item" data-link="#testimonial">Testimonial</li>
+            <li class="navbar__menu__item" data-link="#contact">Contact</li>
+        </ul>
+        <button class="navbar__hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+    <!-- home -->
+    <section id="home">
+        <div class="home__container">
+            <img src="images/Profile.jpeg" alt="" class="home__photo">
+            <h1 class="home__profile">Hello.</h1>
+            <h2 class="home__profile">My name is eunchan.</h2>
+            <button class="home__contact">contact me</button>
+        </div>
+    </section>
+    <!-- about -->
+    <section id="about" class="section">
+        <div class="section__container">
+            <h1>About me</h1>
+            <p>Hello, my name is Eun-chan Yang. I don't have much to write because I'm just starting to learn.<br>
+                However, since I wrote it in Korean, it looked too shabby, so I wrote my self-introduction in English.
+                <br>
+                I will learn hard and become a developer who can write down my real resume in a cool way!
+            </p>
+            <div class="majors">
+                <div class="major">
+                    <div class="major__icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <div class="major__title">
+                        HTML
+                    </div>
+                    <div class="major__discription">
+                        웹 표준을 지키려 노력합니다.<br>
+                        BEM 방법론을 적용할 수 있습니다.
+                    </div>
+                </div>
+                <div class="major">
+                    <div class="major__icon">
+                        <i class="fab fa-css3"></i>
+                    </div>
+                    <div class="major__title">
+                        CSS
+                    </div>
+                    <div class="major__discription">
+                        반응형 웹을 만들 수 있습니다.
+                    </div>
+                </div>
+                <div class="major">
+                    <div class="major__icon">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <div class="major__title">
+                        Java Script
+                    </div>
+                    <div class="major__discription">
+                        ES6+ 문법을 다룰 수 있습니다.
+                    </div>
+                </div>
+            </div>
+            <div class="carrer">
+                <div class="carrer__detail">
+                    <div class="carrer__Detail__logo">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="carrer__discription">
+                        <p class="carrer__discription__title">
+                            이런저런 강의 수강
+                        </p>
+                        <p class="carrer__discription__period">
+                            2022. 01~
+                        </p>
+                    </div>
+                </div>
+                <div class="carrer__detail">
+                    <div class="carrer__Detail__logo">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="carrer__discription">
+                        <p class="carrer__discription__title">
+                            유튜브 독학
+                        </p>
+                        <p class="carrer__discription__period">
+                            2021.12~
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- skills -->
+    <section id="skills" class="section">
+        <div class="section__container">
+            <h1>skills</h1>
+            <h2>skills & Attribute</h2>
+            <p>I'm on an introductory developer course,<br>
+                so I don't have a tech stack to brag about yet. <br>
+                So, I've listed my tech stack that I'm hoping for.</p>
+            <div class="skillset">
+                <div class="skillset__left">
+                    <h3 class="skillset__title">Skills</h3>
+                    <div class="skillset__discription">
+                        <span>html</span>
+                        <span>99%</span>
+                    </div>
+                    <div class="skillset__bar">
+                        <div class="skillset__value" style=width:99%></div>
+                    </div>
+                    <div class="skillset__discription">
+                        <span>css</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skillset__bar">
+                        <div class="skillset__value" style=width:90%></div>
+                    </div>
+                    <div class="skillset__discription">
+                        <span>javascript</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skillset__bar">
+                        <div class="skillset__value" style=width:80%></div>
+                    </div>
+                    <div class="skillset__discription">
+                        <span>React</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="skillset__bar">
+                        <div class="skillset__value" style=width:70%></div>
+                    </div>
+                    <div class="skillset__discription">
+                        <span>Nod.js</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="skillset__bar">
+                        <div class="skillset__value" style=width:70%></div>
+                    </div>
+                </div>
+                <div class="skillset__right">
+                    <div class="skillset__righttop">
+                        <h3 class="skillset__title">Tools</h3>
+                        <ul class="Tools__list">
+                            <li>Visual Studio Code</li>
+                            <li>InteliJ</li>
+                        </ul>
+                    </div>
+                    <div class="skillset__rightbottom">
+                        <h3 class="skillset__title">ETC</h3>
+                        <ul class="ETC__list">
+                            <li>Git</li>
+                            <li>Slack</li>
+                            <li>Cute</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- works -->
+    <div class="section__container">
+        <section id="work" class="section">
+            <h1>My works</h1>
+            <h2>projects</h2>
+            <div class="work__categories">
+                <button class="categories__btn selected" data-category="*">All<sapn class="categories__count">8</sapn>
+                </button>
+                <button class="categories__btn" data-category="HTML/CSS/JS">Basic<sapn class="categories__count">5
+                    </sapn></button>
+                <button class="categories__btn" data-category="React">React<sapn class="categories__count">2</sapn>
+                </button>
+                <button class="categories__btn" data-category="Nod.js">Nod.js<sapn class="categories__count">1</sapn>
+                </button>
+            </div>
+            <div class="work__projects">
+                <a href="#" class="projects" target="blank" data-project="HTML/CSS/JS">
+                    <img src="projectimage/project1.png" class="project__image">
+                    <div class="project__discription">
+                        <h3>clone coding 1</h3>
+                        <span>html/css/JS를 활용한 클론코딩</span>
+                    </div>
+                </a>
+                <a href="#" class="projects" target="blank" data-project="HTML/CSS/JS">
+                    <img src="projectimage/project2.png" class="project__image" alt="clonecoding">
+                    <div class="project__discription">
+                        <h3>clone coding 2</h3>
+                        <span>html/css/JS를 활용한 클론코딩</span>
+                    </div>
+                </a>
+                <a href="#" class="projects" target="blank" data-project="HTML/CSS/JS">
+                    <img src="projectimage/project3.png" class="project__image" alt="clonecoding">
+                    <div class="project__discription">
+                        <h3>clone coding 3</h3>
+                        <span>html/css/JS를 활용한 클론코딩</span>
+                    </div>
+                </a>
+                <a href="#" class="projects" target="blank" data-project="HTML/CSS/JS">
+                    <img src="projectimage/project4.png" class="project__image" alt="clonecoding">
+                    <div class="project__discription">
+                        <h3>clone coding 4</h3>
+                        <span>html/css/JS를 활용한 클론코딩</span>
+                    </div>
+                </a>
+                <a href="#" class="projects" target="blank" data-project="HTML/CSS/JS">
+                    <img src="projectimage/project5.png" class="project__image" alt="clonecoding">
+                    <div class="project__discription">
+                        <h3>clone coding 5</h3>
+                        <span>html/css/JS를 활용한 클론코딩</span>
+                    </div>
+                </a>
+                <a href="#" class="projects" target="blank" data-project="React">
+                    <img src="projectimage/project6.png" class="project__image" alt="clonecoding">
+                    <div class="project__discription">
+                        <h3>clone coding 6</h3>
+                        <span>React를 활용한 클론코딩</span>
+                    </div>
+                </a>
+                <a href="#" class="projects" target="blank" data-project="React">
+                    <img src="projectimage/project6.png" class="project__image" alt="clonecoding">
+                    <div class="project__discription">
+                        <h3>clone coding 7</h3>
+                        <span>React 활용한 클론코딩</span>
+                    </div>
+                </a>
+                <a href="#" class="projects" target="blank" data-project="Nod.js">
+                    <img src="projectimage/project8.png" class="project__image" alt="clonecoding">
+                    <div class="project__discription">
+                        <h3>clone coding 8</h3>
+                        <span>Nod.js를 활용한 클론코딩</span>
+                    </div>
+                </a>
+            </div>
+    </div>
+    </section>
+    <!-- Testimonial -->
+    <section id="testimonial" class="section">
+        <div class="section__container">
+            <h1>Testimonials</h1>
+            <h2>See what they say bout me</h2>
+            <div class="testimonial__list">
+                <img src="images/dog.jpeg" alt="people1" class="testimonial__avatar">
+                <div class="tetimonial__people-buble">
+                    <p>good lord! Master is the best! Let's play! Give me food! I'm going to shit!<br>
+                        I'm going to pee! Let's run! Let's take a walk!
+                    </p>
+                    <span class="name"><a href="https://7357.tistory.com/" target="blank">웅이</a> /my home</span>
+                </div>
+            </div>
+            <div class="testimonial__list">
+                <div class="tetimonial__people-buble">
+                    <p>He is a very capable can opener.<br>
+                        And he scratches my tummy well.</p>
+                    <span class="name"><a href="https://7357.tistory.com/" target="blank">noname cat</a> /sheep
+                        ranch</span>
+                </div>
+                <img src="images/cat.jpeg" alt="people1" class="testimonial__avatar">
+            </div>
+        </div>
+    </section>
+    <!-- contact -->
+    <section id="contact" class="section">
+        <div class="section__container">
+            <h1 class="contact__title">Let's talk</h1>
+            <h2 class="contact__email">pud1251@gmail.com</h2>
+            <div class="contact__link">
+                <a href="https://github.com/yangddoddi/yangddoddi.io.git" target="blank"><i
+                        class="fab fa-github-square"></i></a>
+                <a href="https://www.instagram.com/y.didi2/" target="blank"><i class="fab fa-instagram-square"></i></a>
+            </div>
+            <span class="contact__rights">copyright(c)2022 All rights reserved by 양은찬</span>
+        </div>
+    </section>
+    <!-- arrow button -->
+    <button class="arrowbutton">
+        <i class="fas fa-arrow-circle-up"></i>
+    </button>
+</body>
+
+</html>
