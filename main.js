@@ -24,8 +24,8 @@ navbarMenu.addEventListener("click", (event) => {
   }
   navbarMenu.classList.remove("open");
   const Link = document.querySelector(Position);
+
   Link.scrollIntoView({ behavior: "smooth" });
-  selectNavItem(Target);
 });
 
 // Navbar toggle button
@@ -36,7 +36,8 @@ hamburger.addEventListener("click", () => {
   navbarMenu.classList.toggle("open");
 });
 
-// Navbar Active controll
+// Navbar Active controll (retouch)
+
 const sectionIds = [
   "#home",
   "#about",
@@ -45,55 +46,61 @@ const sectionIds = [
   "#testimonial",
   "#contact",
 ];
-const sections = sectionIds.map((id) => document.querySelector(id));
-const navItems = sectionIds.map((id) =>
-  document.querySelector(`[data-link="${id}"]`)
-);
 
-let selectedNavIndex = 0;
-let selectedNavItem = navItems[0];
-function selectNavItem(selected) {
-  selectedNavItem.classList.remove("active");
-  selectedNavItem = selected;
-  selectedNavItem.classList.add("active");
+const sections = sectionIds.map(function (sectionId) {
+  return document.querySelector(sectionId);
+});
+const navItems = sectionIds.map(function (sectionId) {
+  return document.querySelector(`[data-link="${sectionId}"]`);
+});
+
+let indexNumber = 0;
+
+function ActiveNavItem(target) {
+  for (i = 0; i < navItems.length; i++) {
+    if (i == indexNumber) {
+      navItems[i].classList.add("active");
+    } else {
+      navItems[i].classList.remove("active");
+    }
+  }
 }
-const ObserverOption = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.3,
-};
 
-const observerCallback = (entries, observer) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      const index = sectionIds.indexOf(`#${entry.target.id}`);
-      // 스크롤링이 아래로 되어서 페이지가 올라옴
-      if (entry.boundingClientRect.y < 0) {
-        selectedNavIndex = index + 1;
+function observerCallback(entries, observer) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting == false && entry.intersectionRatio > 0) {
+      const entryIndex = sectionIds.indexOf(`#${entry.target.id}`);
+      if (entry.intersectionRect.y == 0) {
+        indexNumber = entryIndex + 1;
+        console.log(entry.target);
+        ActiveNavItem();
       } else {
-        selectedNavIndex = index - 1;
+        indexNumber = entryIndex - 1;
+        ActiveNavItem();
       }
     }
   });
-};
+}
 
-const observer = new IntersectionObserver(observerCallback, ObserverOption);
-sections.forEach((section) => observer.observe(section));
-
-window.addEventListener("wheel", () => {
-  if (window.scrollY === 0) {
-    selectedNavIndex = 0;
-  } else if (
-    window.scrollY + window.innerHeight ===
-    document.body.clientHeight
-  ) {
-    selectedNavIndex = navItems.length - 1;
+window.addEventListener("scroll", () => {
+  if (window.scrollY + window.innerHeight >= document.body.clientHeight - 2) {
+    // -2를 해줘야 macOS에서 정상적으로 작동함
+    indexNumber = sectionIds.length - 1;
+    ActiveNavItem();
   }
-
-  selectNavItem(navItems[selectedNavIndex]);
 });
 
-// Pressing the Contact Me button moves to the contact item.
+const observerOption = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.5,
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOption);
+
+sections.forEach(function (entry) {
+  observer.observe(entry);
+});
 
 const Contacbtn = document.querySelector(".home__contact");
 Contacbtn.addEventListener("click", (event) => {
@@ -109,7 +116,7 @@ document.addEventListener("scroll", () => {
   HomeContainer.style.opacity = 1 - scrollY / Homeheight;
 });
 
-// If you click, the button that moves to the top of the page.
+//the button that moves to the top of the page.
 
 const ArrowButton = document.querySelector(".arrowbutton");
 const About = document.querySelector("#about");
@@ -125,7 +132,6 @@ document.addEventListener("scroll", () => {
 function scrollIntoView(selector) {
   const Scrollto = document.querySelector(selector);
   Scrollto.scrollIntoView({ behavior: "smooth" });
-  selectNavItem(navItems[sectionIds.indexOf(selector)]);
 }
 
 ArrowButton.addEventListener("click", () => {
