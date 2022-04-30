@@ -1,6 +1,6 @@
 # portfolio
 
-gif ⬇
+gif ⬇. 
 ![portfolio1](https://user-images.githubusercontent.com/97802103/166093014-0325a7e3-9863-436a-b485-81ac6651f3e2.gif)
 ![portfolio2](https://user-images.githubusercontent.com/97802103/166093017-ff5a1636-a64d-439b-95fd-2ca522c33829.gif)
 
